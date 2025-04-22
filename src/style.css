@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* write your CSS here */
+
+body {
+    font-family: Poppins, serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+#container {
+    max-width: 68.75rem;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.59);
+    border: 1rem solid #FFFFFF;
+    border-radius: 1.875rem;
+    display: grid;
+    grid-template-columns: 23.1875rem 1fr;
+    grid-template-rows: 15.5625rem 3.75rem 9.3125rem;
+    grid-template-areas:
+        "photo header"
+        "photo info"
+        ". buttons";
+    gap: 2.5rem;
+}
+img {
+    grid-area: photo;
+    justify-self: end;
+    margin-top: 2.5rem;
+}
+#header {
+    grid-area: header;
+}
+#header h1 {
+    font-family: Merriweather, serif;
+    color: #141843;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 5.375rem;
+}
+#header h2 {
+    color: #5F627A;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-top: 0.25rem;
+}
+#header p {
+    color: #141843;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-top: 0.6875rem;
+}
+#info {
+    color: #141843;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-align: center;
+    grid-area: info;
+    display: flex;
+    flex-direction: row;
+    justify-items: start;
+    gap: 2.8125rem;
+    margin-top: 0.125rem;
+}
+.info-block:not(:last-child) {
+    border-right-style: solid;
+    border-right-width: 0.0625rem;
+    border-right-color: #141843;
+    padding-right: 2.8125rem;
+}
+#buttons {
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-align: center;
+    grid-area: buttons;
+    display: grid;
+    grid-template-columns: 10rem 10rem;
+    gap: 1.4375rem;
+    align-items: start;
+    padding-top: 0.25rem;
+}
+#follow, #view {
+    border-style: solid;
+    border-width: 0.0625rem;
+    padding: 1rem 0;
+    text-align: center;
+    border-radius: 0.625rem;
+}
+#follow {
+    background-color: #AEF1F5;
+}
+#view {
+    background-color: #FFDDB6;
+}
